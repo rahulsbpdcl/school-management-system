@@ -36,6 +36,11 @@ const studentSchema = new mongoose.Schema({
     }], required: true},
     class: { type: String, required: true},
     section: { type: String, required: true },
+    lastSchool: {
+        name: { type: String, required: true},
+        studentId: { type: String },
+        class: { type: String, required: true}
+    },
     //assignments
     //payments
     //courses
