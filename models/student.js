@@ -34,17 +34,25 @@ const studentSchema = new mongoose.Schema({
         picture: {type: String, unique: true},
         relationWithStudent: { type: String}
     }], required: true},
-    class: { type: String, required: true},
-    section: { type: String, required: true },
-    lastSchool: {
-        name: { type: String, required: true},
-        studentId: { type: String },
-        class: { type: String, required: true}
-    },
+    class: { type: String, required: true}, 
+    section: { type: String },
+    //year
+    //semester
+    previousSchools:{ type: [{
+            name: { type: String, required: true},
+            studentId: { type: String },
+            class: { type: String, required: true},
+            section: { type: String },
+        },
+    ]},
+    transferCertificate: { type: String },//document url
     //assignments
     //payments
     //courses
     //messages
+    //timetable / schedule
+    //grades
+    //educational qualification
     createdBy: {type: String},
     updatedBy: {type: String}
 

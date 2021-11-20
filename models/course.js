@@ -6,7 +6,10 @@ const courseSchema = new mongoose.Schema({
     instructors: { type: [
         //refs of faculties
     ]},
-    
+    courseDuration: Number,
+    assests: { type: [
+         //reference of textbooks or study materials   
+    ]},
     createdBy: {type: String},
     updatedBy: {type: String}
 

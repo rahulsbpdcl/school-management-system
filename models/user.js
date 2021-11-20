@@ -1,0 +1,1 @@
+//a user can be a staff or an administartor, will have a role and credentials which will allow us to dynamically modify the interface and also applu authorization at back-end

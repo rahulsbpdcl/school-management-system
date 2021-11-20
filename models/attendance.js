@@ -1,0 +1,1 @@
+//attendance ties to an item in a schedule which is of type class/exam/seminar etc. an attendance ties to a course for a class

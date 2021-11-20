@@ -1,0 +1,1 @@
+//room lists all the events tied to it as defined in schedule
