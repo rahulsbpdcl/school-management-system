@@ -6,8 +6,9 @@
 //last name
 //doa
 //dob
-//dor
-//doar date of actual or early retirement/resignation
+//dor retirement
+//dateofnotice
+//lastworkday date of actual or early retirement/resignation
 //resignation remarks
 //gender
 //bloodgroup
@@ -16,6 +17,9 @@
 //addresses
 //picture
 //designation
+//aadhaar
+//work-exp
+//organisationsWorked[]
 
 //education qualifications
 //secondary -- board, percentage, pass year
@@ -25,9 +29,8 @@
 //others -- degree name, university/college, percentage, pass year
 //certifications -- certification name, provider, issued on, expires on
 
-//courses
 //enrolled courses
-//specializes in 
+//specializes in
 
 //salary structure (school / university specific)
 //basic, bank account, allowances, epf etc
