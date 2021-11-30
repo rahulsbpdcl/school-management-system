@@ -2,6 +2,10 @@ const express = require('express');
 const mongoose = require('mongoose');
 const app = express();
 
+const schoolRoutes = require('./Routes/school');
+
+app.use('/school', schoolRoutes);
+
 
 app.use(express.json());
 
@@ -18,7 +22,7 @@ app.use((error, req, res, next) => {
     console.log(error);
 });
 
-mongoose.connect('mongodb://appdev:dev@localhost:27017/payroll?authSource=payroll', {useNewUrlParser: true, useUnifiedTopology: true})
+mongoose.connect(process.env.MONGODB_URI)
 //mongoose.connect(process.env.MONGODB_PAYROLL_URI, {useNewUrlParser: true, useUnifiedTopology: true})
 .then(result=> {
     console.log('Database Connected');
