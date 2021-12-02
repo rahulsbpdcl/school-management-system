@@ -26,6 +26,6 @@ mongoose.connect(process.env.MONGODB_URI)
 //mongoose.connect(process.env.MONGODB_PAYROLL_URI, {useNewUrlParser: true, useUnifiedTopology: true})
 .then(result=> {
     console.log('Database Connected');
-    app.listen();
+    app.listen(process.env.PORT);
 })
 .catch(err=>console.log(err));
