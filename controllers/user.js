@@ -30,7 +30,7 @@ exports.login=async(req,res,next) => {
         }
 
         const token=jwt.sign({userId: existingUser.userId, role: existingUser.role, status: existingUser.status }, 
-            process.env.JWT_SIGNATURE, 
+            `${process.env.JWT_SIGNATURE}`, 
             {expiresIn: '1h'}
             );
 
@@ -47,16 +47,16 @@ exports.login=async(req,res,next) => {
 exports.createUser = async (req,res,next) => {
     
     try{
+
         const password=await bcrypt.hash(req.body.password, Number(process.env.SALT) );
 
         const user=new User({
-            userId: request.body.userId,
+            userId: req.body.userId,
             password: password,
             role: req.body.role,
             status: 'active'
 
         });
-
 
         await user.save();
 

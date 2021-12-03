@@ -22,7 +22,7 @@ app.use((error, req, res, next) => {
     console.log(error);
 });
 
-mongoose.connect(process.env.MONGODB_URI)
+mongoose.connect(process.env.MONGODB_URI, {useNewUrlParser: true, useUnifiedTopology: true})
 //mongoose.connect(process.env.MONGODB_PAYROLL_URI, {useNewUrlParser: true, useUnifiedTopology: true})
 .then(result=> {
     console.log('Database Connected');
